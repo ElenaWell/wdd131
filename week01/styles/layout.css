@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    background-color: #303030;
+    color: white;
+    padding: 20px;
+    height: 120px;
+}
+
+
+/* Navigation bar */
+nav {
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 62px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+
+/* Main content and aside */
+.content {
+    display: grid;
+    grid-template-columns: 72.5% 27.5%;
+    min-height: 325px;
+}
+
+main {
+    background-color: #cccccc;
+    padding: 20px;
+    font-size: 20px;
+}
+
+aside {
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #303030;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    min-height: 206px;
+}

@@ -1,0 +1,194 @@
+/* Global styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #2B0D16;
+    --color-surface: #541D2B;
+    --color-text: #F7F0E8;
+    --color-accent: #D6B982;
+    --font-heading: "DM Serif Display", serif;
+    --font-body: "Lato", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--color-surface);
+}
+
+#course-title {
+    display: block;
+    padding: 1rem 5%;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background-color: #17070C;
+    border-top: 1px solid rgb(214 185 130 / 25%);
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    transition: color 250ms ease;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+nav a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    text-align: center;
+    margin: 2.5rem 0;
+    color: var(--color-accent);
+}
+main {
+    width: min(90%, 1200px);
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+main h1 {
+    grid-column: 1 / -1;
+}
+
+.card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border: 1px solid rgb(214 185 130 / 25%);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
+}
+
+.card h2 {
+    background-color: #17070C;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    text-align: center;
+    margin: -2rem -2rem 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(214 185 130 / 25%);
+    border-radius: 12px 12px 0 0;
+}
+
+.card li {
+    font-size: 1.3rem;
+}
+
+
+.card a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 250ms ease;
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+.card a:hover {
+    color: var(--color-accent);
+}
+
+.card a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-layout img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.country-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.country-layout figure {
+    margin: 0;
+}
+
+.country-layout img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* This is not part of the requirement but I'm going to add this for better experience.*/
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .about-layout,
+    .country-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 2px solid var(--color-accent);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+}
