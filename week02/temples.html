@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +7,32 @@
     <meta name="description" content="A collection of beautiful temples of The Church of Jesus Christ of Latter-day Saints around the world.">
     <meta name="author" content="Elena Well Diaz">
     <title>Temple Album | Sacred Spaces</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JavaScript -->
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
-        <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+
+        <button
+            id="menu-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation">
             ☰
         </button>
-        <nav>
+
+        <nav id="primary-navigation">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
@@ -33,47 +49,47 @@
 
         <div class="temple-gallery">
             <figure>
-                <img src="images/accra_ghana_temple_lds.jpeg" alt="Accra Ghana Temple exterior">
+                <img src="images/accra-temple.jpeg" alt="Accra Ghana Temple exterior">
                 <figcaption>Accra Ghana Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/auckland_new_zealand_temple_exteriors.jpeg" alt="Auckland New Zealand Temple exterior">
+                <img src="images/auckland-temple.jpeg" alt="Auckland New Zealand Temple">
                 <figcaption>Auckland New Zealand Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/bern_switzerland_temple_lds.jpeg" alt="Bern Switzerland Temple exterior">
+                <img src="images/bern-temple.jpeg" alt="Bern Switzerland Temple">
                 <figcaption>Bern Switzerland Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/davao_philippines_temple_exterior.jpeg" alt="Davao Philippines Temple exterior">
+                <img src="images/davao-temple.jpeg" alt="Davao Philippines Temple">
                 <figcaption>Davao Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/exterior_washington_dc_temple.jpeg" alt="Washington D.C. Temple exterior">
+                <img src="images/washington-temple.jpeg" alt="Washington D.C. Temple">
                 <figcaption>Washington D.C. Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/paris_france_temple_exterior.jpeg" alt="Paris France Temple exterior">
+                <img src="images/paris-temple.jpeg" alt="Paris France Temple">
                 <figcaption>Paris France Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/rome_italy_temple.jpeg" alt="Rome Italy Temple exterior">
+                <img src="images/rome-temple.jpeg" alt="Rome Italy Temple">
                 <figcaption>Rome Italy Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/seoul_korea_temple_lds.jpeg" alt="Seoul Korea Temple exterior">
+                <img src="images/seoul-temple.jpeg" alt="Seoul Korea Temple">
                 <figcaption>Seoul Korea Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/tokyo_japan_temple.jpeg" alt="Tokyo Japan Temple exterior">
+                <img src="images/tokyo-temple.jpeg" alt="Tokyo Japan Temple">
                 <figcaption>Tokyo Japan Temple</figcaption>
             </figure>
         </div>
