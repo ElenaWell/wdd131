@@ -1,0 +1,230 @@
+/* 
+   CSS RESET & GLOBAL STYLES
+ */
+
+
+:root {
+    /* Color palette */
+    --color-background: #F5F0E6;
+    --color-surface: #FFFCF6;
+    --color-primary: #343A32;
+    --color-secondary: #626B50;
+    --color-accent: #A58B68;
+    --color-text: #292D28;
+
+    /* Typography */
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+
+    /* Spacing */
+    --spacing-small: 0.75rem;
+    --spacing-medium: 1.5rem;
+    --spacing-large: 2.5rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 
+   HEADER
+ */
+
+header {
+    text-align: center;
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-small);
+}
+
+header h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-small);
+}
+
+header p {
+    max-width: 38rem;
+    margin: 0 auto;
+}
+
+/*
+   HERO
+*/
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero picture {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero img {
+        height: 350px;
+    }
+}
+/*
+   DATA & WEATHER SECTIONS
+*/
+
+.data,
+.weather {
+    background-color: var(--color-surface);
+    margin: var(--spacing-medium);
+    padding: var(--spacing-large);
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(41, 45, 40, 0.10);
+}
+
+.data h2,
+.weather h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-medium);
+    padding-bottom: var(--spacing-small);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* INFORMATION LISTS */
+
+.data ul,
+.weather ul {
+    list-style: none;
+}
+
+.data li,
+.weather li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #E5DED1;
+}
+
+.data li:last-child,
+.weather li:last-child {
+    border-bottom: none;
+}
+
+.data strong,
+.weather strong {
+    color: var(--color-secondary);
+}
+
+/* WEATHER ICON */
+
+.weather-icon {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 0 auto var(--spacing-medium);
+}
+
+/*
+   FOOTER
+*/
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    text-align: center;
+    padding: var(--spacing-large) var(--spacing-medium);
+    margin-top: var(--spacing-large);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-small);
+
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*
+   DESKTOP LAYOUT
+*/
+
+@media (min-width: 900px) {
+
+    main {
+        position: relative;
+        min-height: 650px;
+    }
+
+    .hero img {
+        height: 650px;
+    }
+
+    .data,
+    .weather {
+        position: absolute;
+        top: 2rem;
+        width: min(38%, 380px);
+        margin: 0;
+        padding: var(--spacing-medium);
+        z-index: 1;
+    }
+
+    .data {
+        left: 4%;
+    }
+
+    .weather {
+        right: 4%;
+    }
+
+    /* Weather icon requirements */
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+    content: " ⛅";
+}
+}

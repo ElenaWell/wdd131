@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Kyoto, Japan, a city known for its historic temples, traditional architecture, and cultural heritage.">
+    <meta name="author" content="Elena Well Diaz">
+    <title>Discover Kyoto, Japan | Elena Well Diaz</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Discover Kyoto, Japan</h1>
+        <h2>Where Tradition Meets Tranquility</h2>
+        <p>A historic Japanese city where ancient temples, traditional streets, and modern life coexist.</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="images/kyoto-mobile.webp">
+                <img
+                    src="images/kyoto-desktop-landscape.webp"
+                    alt="Traditional pagoda in Kyoto, Japan">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>About Kyoto</h2>
+            <ul>
+                <li><strong>Country:</strong> Japan</li>
+                <li><strong>Region:</strong> Kansai</li>
+                <li><strong>Prefecture:</strong> Kyoto Prefecture</li>
+                <li><strong>Population:</strong> Approximately 1.4 million</li>
+                <li><strong>Area:</strong> Approximately 828 km²</li>
+                <li><strong>Language:</strong> Japanese</li>
+                <li><strong>Currency:</strong> Japanese Yen (JPY)</li>
+                <li><strong>Time Zone:</strong> Japan Standard Time (UTC+9)</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img
+                class="weather-icon"
+                src="images/cloud-sun.svg"
+                alt="Partly cloudy">
+
+            <ul>
+                <li><strong>Temperature:</strong> 9°C</li>
+                <li><strong>Condition:</strong> Partly Cloudy</li>
+                <li><strong>Wind Speed:</strong> 10 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            | Elena Well Diaz. All rights reserved.
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
