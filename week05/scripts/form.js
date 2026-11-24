@@ -1,4 +1,3 @@
-
 const products = [
     {
         id: "fc-1888",
@@ -29,11 +28,19 @@ const products = [
 
 const productSelect = document.querySelector("#productName");
 
-products.forEach(product => {
-    const option = document.createElement("option");
+if (productSelect) {
+    products.forEach(product => {
+        const option = document.createElement("option");
 
-    option.value = product.id;
-    option.textContent = product.name;
+        option.value = product.id;
+        option.textContent = product.name;
 
-    productSelect.appendChild(option);
-});
+        productSelect.appendChild(option);
+    });
+}
+
+const lastModifiedElement = document.querySelector("#lastModified");
+
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = document.lastModified;
+}

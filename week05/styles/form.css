@@ -9,8 +9,6 @@
     --color-secondary: #514541;
     --color-primary: #A65D65;
     --color-primary-hover: #854951;
-    --color-blush: #E8D5D0;
-    --color-sage: #78816B;
     --color-border: #D8CEC5;
 
     --font-heading: "DM Serif Display", Georgia, serif;
@@ -28,7 +26,12 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.6;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 
 /*
    2. HEADER
@@ -55,6 +58,7 @@ main {
     max-width: 800px;
     margin: 2.5rem auto;
     padding: 0 1.25rem;
+    flex: 1;
 }
 
 form {
@@ -94,10 +98,6 @@ label span {
     color: var(--color-secondary);
 }
 
-fieldset p {
-    color: var(--color-secondary);
-    margin-bottom: 0.75rem;
-}
 
 /* Required field indicators */
 
@@ -113,12 +113,6 @@ label[for="userName"] {
     margin-top: 1.5rem;
 }
 
-/* Optional field indicators */
-
-.required-note {
-    font-size: 0.85rem;
-    color: var(--color-secondary);
-}
 
 /*
    5. FORM CONTROLS
@@ -211,10 +205,6 @@ textarea:focus {
     cursor: pointer;
 }
 
-.features-fieldset legend {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
 
 /*
    8. SUBMIT BUTTON
@@ -254,7 +244,7 @@ footer {
     color: var(--color-surface);
     text-align: center;
     padding: 1.5rem 1rem;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 footer p + p {
@@ -277,4 +267,51 @@ footer p + p {
     form {
         padding: 2.5rem;
     }
+}
+
+
+/*
+   11. REVIEW CONFIRMATION
+*/
+
+.confirmation {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.confirmation h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.confirmation p {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.confirmation strong {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+.confirmation a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.confirmation a:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.confirmation a:focus-visible {
+    outline: 3px solid var(--color-text);
+    outline-offset: 3px;
 }
