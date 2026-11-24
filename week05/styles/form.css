@@ -1,0 +1,280 @@
+/*
+   1. ROOT & RESET
+*/
+
+:root {
+    --color-background: #F7F2EA;
+    --color-surface: #FFFCF8;
+    --color-text: #342B29;
+    --color-secondary: #514541;
+    --color-primary: #A65D65;
+    --color-primary-hover: #854951;
+    --color-blush: #E8D5D0;
+    --color-sage: #78816B;
+    --color-border: #D8CEC5;
+
+    --font-heading: "DM Serif Display", Georgia, serif;
+    --font-body: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/*
+   2. HEADER
+*/
+
+header {
+    background-color: var(--color-text);
+    color: var(--color-surface);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+/*
+   3. MAIN & FORM CONTAINER
+*/
+
+main {
+    max-width: 800px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+form {
+    background-color: var(--color-surface);
+    padding: 2.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(52, 43, 41, 0.06);
+}
+
+/*
+   4. FIELD GROUPS
+*/
+
+fieldset {
+    border: none;
+    margin-bottom: 2.25rem;
+    min-width: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+}
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+label span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+}
+
+fieldset p {
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* Required field indicators */
+
+label[for="productName"]::after,
+label[for="installationDate"]::after,
+fieldset:has(input[name="rating"][required]) legend::after {
+    content: " *";
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+label[for="userName"] {
+    margin-top: 1.5rem;
+}
+
+/* Optional field indicators */
+
+.required-note {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+}
+
+/*
+   5. FORM CONTROLS
+*/
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1.025rem;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/*
+   6. OVERALL RATING
+*/
+
+.rating-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.rating-options div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-options label {
+    order: 1;
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+    letter-spacing: -2px;
+}
+
+.rating-options input {
+    order: 2;
+    accent-color: var(--color-primary);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/*
+   7. USEFUL FEATURES
+*/
+
+.feature-option {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
+}
+
+.feature-option input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.feature-option label {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.features-fieldset legend {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/*
+   8. SUBMIT BUTTON
+*/
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    padding: 0.85rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-primary-hover);
+}
+
+input[type="submit"]:focus-visible {
+    outline: 3px solid var(--color-text);
+    outline-offset: 3px;
+}
+
+/*
+   9. FOOTER
+*/
+
+footer {
+    background-color: var(--color-text);
+    color: var(--color-surface);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p + p {
+    margin-top: 0.25rem;
+}
+
+/*
+   10. RESPONSIVE DESIGN
+*/
+
+@media screen and (min-width: 600px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        margin: 3rem auto;
+    }
+
+    form {
+        padding: 2.5rem;
+    }
+}
