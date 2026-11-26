@@ -55,7 +55,9 @@ header h1 {
 */
 
 main {
+    width: 100%;
     max-width: 800px;
+    min-width: 0;
     margin: 2.5rem auto;
     padding: 0 1.25rem;
     flex: 1;
@@ -152,6 +154,7 @@ textarea:focus {
 
 .rating-options {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
