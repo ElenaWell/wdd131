@@ -1,0 +1,511 @@
+/* 
+   POLE POSITION 2026
+   Website Planning Document
+   Gotham Noir + Gotham Gold
+*/
+
+/* COLOR VARIABLES */
+
+:root {
+    --obsidian: #101216;
+    --graphite: #242830;
+    --gunmetal: #414750;
+    --steel: #AEB4BC;
+    --mist: #E7E8E8;
+    --arctic: #F5F5F2;
+    --gold: #F2C94C;
+    --antique-gold: #C49A32;
+
+    --text-dark: #202329;
+    --text-light: #F5F5F2;
+
+    --heading-font: "Oswald", sans-serif;
+    --body-font: "Inter", sans-serif;
+}
+
+/*  RESET AND BASE  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--arctic);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+/* HEADER  */
+
+.site-header {
+    background-color: var(--obsidian);
+    color: var(--text-light);
+    padding: 2.5rem 5%;
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    border-bottom: 4px solid var(--gold);
+}
+
+.brand-mark {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    color: var(--text-light);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.brand-mark span,
+.site-header h1 span {
+    color: var(--gold);
+}
+
+.header-content {
+    min-width: 0;
+}
+
+.document-label {
+    color: var(--steel);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.site-header h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.site-header h1 small {
+    color: var(--gold);
+    font-family: var(--body-font);
+    font-size: 0.4em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    vertical-align: middle;
+}
+
+.header-tagline {
+    color: var(--steel);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    letter-spacing: 1px;
+}
+
+/* MAIN CONTENT  */
+
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 3rem 0 4rem;
+}
+
+.plan-section {
+    margin-bottom: 3.5rem;
+}
+
+.plan-section h2 {
+    display: table;
+    font-family: var(--heading-font);
+    color: var(--obsidian);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 4px solid var(--gold);
+}
+
+.plan-section p {
+    margin-bottom: 0.9rem;
+    font-size: 1rem;
+}
+
+.plan-section strong {
+    font-weight: 700;
+}
+
+.gold-text {
+    color: var(--antique-gold);
+}
+
+.plan-section ul {
+    padding-left: 1.5rem;
+}
+
+.plan-section li {
+    padding-left: 0.3rem;
+    margin-bottom: 0.65rem;
+}
+
+/*COLOR PALETTE */
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.color-card {
+    overflow: hidden;
+    border: 1px solid #D4D4CE;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 6px rgb(16 18 22 / 5%);
+}
+
+.color-swatch {
+    height: 85px;
+    border-bottom: 1px solid rgb(16 18 22 / 8%);
+}
+
+.color-info {
+    padding: 0.75rem;
+}
+
+.color-info strong {
+    display: block;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+}
+
+.color-info p {
+    color: #555B63;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0.2rem 0 0;
+}
+
+/* Individual palette colors */
+
+.obsidian {
+    background-color: var(--obsidian);
+}
+
+.graphite {
+    background-color: var(--graphite);
+}
+
+.gunmetal {
+    background-color: var(--gunmetal);
+}
+
+.steel {
+    background-color: var(--steel);
+}
+
+.mist {
+    background-color: var(--mist);
+}
+
+.arctic {
+    background-color: var(--arctic);
+}
+
+.gold {
+    background-color: var(--gold);
+}
+
+.antique {
+    background-color: var(--antique-gold);
+}
+
+/* TYPOGRAPHY */
+
+.font-sample {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: #FFFFFF;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+}
+
+.font-role {
+    color: #626873;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    margin-bottom: 0.7rem !important;
+}
+
+.oswald-sample {
+    font-family: var(--heading-font);
+    font-size: clamp(1.7rem, 4vw, 2.5rem) !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.inter-sample {
+    font-family: var(--body-font);
+    font-size: 1rem !important;
+    line-height: 1.8;
+}
+
+/* WIREFRAMES */
+
+.wireframe-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.wireframe-example h3 {
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    color: var(--graphite);
+    margin-bottom: 1rem;
+}
+
+.mobile-wireframe,
+.desktop-wireframe {
+    border: 2px solid var(--gunmetal);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    color: var(--text-dark);
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.mobile-wireframe {
+    width: min(100%, 280px);
+    margin: 0 auto;
+}
+
+.desktop-wireframe {
+    width: 100%;
+}
+
+.wf-header {
+    background-color: var(--obsidian);
+    color: var(--text-light);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.wf-hero {
+    min-height: 180px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--graphite);
+    color: var(--text-light);
+}
+
+.wf-hero strong {
+    color: var(--gold);
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+}
+
+.wf-button {
+    background-color: var(--gold);
+    color: var(--obsidian);
+    padding: 0.4rem 1rem;
+    font-weight: 700;
+    border-radius: 3px;
+    margin-top: 0.3rem;
+}
+
+.wf-section {
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid #D8DADD;
+}
+
+.wf-section strong {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    color: var(--obsidian);
+}
+
+.wf-card {
+    padding: 1rem;
+    margin-top: 0.4rem;
+    background-color: var(--mist);
+    border: 1px dashed var(--gunmetal);
+    color: var(--gunmetal);
+    font-weight: 600;
+}
+
+.wf-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wf-columns .wf-section {
+    min-width: 0;
+}
+
+.wf-footer {
+    padding: 1rem;
+    background-color: var(--obsidian);
+    color: var(--steel);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/*DOCUMENT FOOTER */
+
+.site-footer {
+    position: relative;
+    padding: 2.5rem 5% 1.5rem;
+    background-color: var(--obsidian);
+    color: var(--steel);
+    text-align: center;
+    border-top: 3px solid var(--gold);
+}
+
+.site-footer::before {
+    content: "POLE POSITION.";
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.site-footer p {
+    margin: 0.35rem 0;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.site-footer #currentyear {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.site-footer #lastModified {
+    margin-top: 0.75rem;
+    color: var(--antique-gold);
+    font-size: 0.72rem;
+}
+
+@media screen and (max-width: 420px) {
+    .site-footer {
+        padding: 2rem 5% 1.25rem;
+    }
+
+    .site-footer::before {
+        font-size: 1.3rem;
+    }
+}
+
+/*  RESPONSIVE DESIGN  */
+
+@media screen and (max-width: 750px) {
+    .site-header {
+        padding: 2rem 5%;
+        gap: 1rem;
+    }
+
+    .brand-mark {
+        width: 75px;
+        height: 75px;
+        font-size: 1.6rem;
+    }
+
+    .document-label {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .site-header h1 {
+        font-size: clamp(1.7rem, 6vw, 2.5rem);
+    }
+
+    main {
+        width: 90%;
+        padding-top: 2.5rem;
+    }
+
+    .color-palette {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wireframe-container {
+        grid-template-columns: 1fr;
+    }
+
+    .desktop-wireframe {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .brand-mark {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
+
+    .plan-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .color-palette {
+        gap: 0.65rem;
+    }
+
+    .color-swatch {
+        height: 65px;
+    }
+
+    .color-info {
+        padding: 0.6rem;
+    }
+
+    .color-info p {
+        font-size: 0.72rem;
+    }
+
+    .wf-columns {
+        grid-template-columns: 1fr;
+    }
+}
